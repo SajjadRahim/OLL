@@ -5,7 +5,7 @@
 
 ## ⬇️ التنزيل
 
-**[نزّل آخر إصدار](https://github.com/SajjadRahim/OLL/releases/latest)**: الملف `OLL-1.00.pkg`.
+**[نزّل آخر إصدار](https://github.com/SajjadRahim/OLL/releases/latest)**: الملف `OLL-1.01.pkg`.
 
 ملف `update.json` في صفحة الإصدار يستخدمه التطبيق في التحديث الذاتي، وما تحتاج تنزله.
 
@@ -16,8 +16,8 @@
 
 ## التثبيت
 
-1. انسخ ملف `OLL-1.00.pkg` إلى فلاشة USB، أو إلى `/data/pkg` على الجهاز.
-2. 2. ثبّته من **Debug Settings > Package Installer** في GoldHEN، أو من أي أداة تثبيت PKG.
+1. انسخ ملف `OLL-1.01.pkg` إلى فلاشة USB، أو إلى `/data/pkg` على الجهاز.
+2. 2. 2. ثبّته من **Debug Settings > Package Installer** في GoldHEN، أو من أي أداة تثبيت PKG.
 3. شغّل **مكتبة أوربس للتعريبات** من الشاشة الرئيسية.
 
 ## التحديث
@@ -33,7 +33,7 @@
 A PS4 app (GoldHEN) for browsing and installing Arabic game translations.
 This repository only hosts the released app; each version is published under
 [Releases](https://github.com/SajjadRahim/OLL/releases/latest) as a
-ready-to-install `OLL-1.00.pkg`.
+ready-to-install `OLL-1.01.pkg`.
 
 **Install:** copy the pkg to a USB drive (or `/data/pkg`) and install it with
 GoldHEN's Debug Settings > Package Installer.
