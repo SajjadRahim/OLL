@@ -1,44 +1,103 @@
-# مكتبة أوربس للتعريبات · Orbis Localization Library
+<div align="center">
 
-تطبيق لجهاز PS4 (يعمل مع GoldHEN) تتصفح فيه تعريبات الألعاب العربية وتثبّتها بضغطة زر.
-هذا المستودع للتنزيل فقط: كل إصدار من التطبيق ينشر هنا كملف PKG جاهز للتثبيت.
+<img src="images/banner.png" alt="مكتبة أوربس للتعريبات" width="100%">
 
-## ⬇️ التنزيل
+<br><br>
 
-**[نزّل آخر إصدار](https://github.com/SajjadRahim/OLL/releases/latest)**: الملف `OLL-1.01.pkg`.
+<a href="https://github.com/SajjadRahim/OLL/releases/latest"><img src="images/download.png" alt="تنزيل آخر إصدار" width="300"></a>
 
-ملف `update.json` في صفحة الإصدار يستخدمه التطبيق في التحديث الذاتي، وما تحتاج تنزله.
+<br>
+
+**[صفحة كل الإصدارات](https://github.com/SajjadRahim/OLL/releases)** · **[حساب X](https://x.com/OLLPS4)** · **[قناة تيليجرام](https://t.me/OLLPS4)**
+
+</div>
+
+<br>
+
+<div dir="rtl">
+
+## ما هي مكتبة أوربس للتعريبات؟
+
+تطبيق مجاني لأجهزة PS4 المعدّلة يجمع تعريبات الألعاب العربية في مكان واحد. تتصفح فيه كتالوجًا يُحدَّث باستمرار، وترى تفاصيل كل تعريب ولقطات من داخل اللعبة، ثم تنزّله وتثبّته بضغطة زر، دون حاجة إلى حاسوب ودون تعديل أي ملف أصلي في اللعبة.
+
+<p align="center"><img src="images/03-library.jpg" alt="المكتبة" width="100%"></p>
+
+## المزايا
+
+- **تنزيل وتثبيت بضغطة زر:** ملفات موقّعة يُتحقَّق منها قبل التثبيت.
+- **كتالوج على الإنترنت:** كل التعريبات العربية المتاحة، يُحدَّث باستمرار.
+- **يتعرّف على ألعابك:** يكتشف الألعاب المثبتة على جهازك ويعرض تعريباتها أولًا.
+- **تفاصيل كاملة قبل التثبيت:** فريق العمل، ونوع التعريب، والحجم، والتوافق مع تحديث لعبتك.
+- **لقطات من داخل اللعبة:** شاهد التعريب قبل تثبيته.
+- **أكثر من تعريب للعبة الواحدة:** فرق مختلفة، وتعريب بشري أو آلي، ولكل تحديث تعريبه.
+- **تنبيه عند اختلاف التحديث:** يقارن إصدار لعبتك بالإصدار الذي أُعدّ له التعريب.
+- **تثبيت عدة تعريبات دفعة واحدة.**
+- **إدارة التعريبات المثبتة:** حجم كل تعريب، والمساحة المتبقية، وحذف الجميع بضغطة.
+- **فحص وإصلاح:** يتحقق من كل ملف مثبت ويصلح المشكلات.
+- **نسخ إلى USB ونسخ احتياطي:** احفظ تعريباتك حزمًا كاملة واستعدها متى شئت، دون إنترنت.
+- **ست طرق لعرض المكتبة**، وثيمان فاتح وداكن، وثمانية ألوان، وعدة خطوط عربية.
+- **يحدّث نفسه:** ينزّل الإصدار الجديد ويتحقق من توقيعه، ويعرض لك ما الجديد فيه.
+
+## لقطات من التطبيق
+
+<table>
+<tr>
+<td width="50%"><img src="images/01-install.jpg" alt="التنزيل والتثبيت"></td>
+<td width="50%"><img src="images/02-copy-to-usb.jpg" alt="النسخ إلى USB"></td>
+</tr>
+<tr>
+<td><img src="images/04-layouts-grid.jpg" alt="طرق العرض"></td>
+<td><img src="images/06-for-your-games.jpg" alt="ألعابك"></td>
+</tr>
+<tr>
+<td><img src="images/07-details.jpg" alt="تفاصيل التعريب"></td>
+<td><img src="images/08-screenshots.jpg" alt="لقطات من داخل اللعبة"></td>
+</tr>
+<tr>
+<td><img src="images/09-variants.jpg" alt="أكثر من تعريب"></td>
+<td><img src="images/10-version-mismatch.jpg" alt="اختلاف التحديث"></td>
+</tr>
+<tr>
+<td><img src="images/11-batch-install.jpg" alt="تثبيت عدة تعريبات"></td>
+<td><img src="images/12-installed.jpg" alt="التعريبات المثبتة"></td>
+</tr>
+<tr>
+<td><img src="images/13-check-repair.jpg" alt="فحص وإصلاح"></td>
+<td><img src="images/14-backup.jpg" alt="النسخ الاحتياطي"></td>
+</tr>
+<tr>
+<td><img src="images/15-light-theme.jpg" alt="الثيم الفاتح"></td>
+<td><img src="images/17-whats-new.jpg" alt="ما الجديد"></td>
+</tr>
+</table>
 
 ## المتطلبات
 
-- جهاز PS4 معدل وعليه **GoldHEN**.
-- - اتصال بالإنترنت لتصفح التعريبات وتنزيلها، أو فلاشة USB فيها ملفات التعريب.
+- جهاز PS4 معدّل وعليه **GoldHEN**.
+- اتصال بالإنترنت لتصفح التعريبات وتنزيلها، أو فلاشة USB فيها حزم التعريبات.
 
 ## التثبيت
 
-1. انسخ ملف `OLL-1.01.pkg` إلى فلاشة USB، أو إلى `/data/pkg` على الجهاز.
-2. 2. 2. ثبّته من **Debug Settings > Package Installer** في GoldHEN، أو من أي أداة تثبيت PKG.
-3. شغّل **مكتبة أوربس للتعريبات** من الشاشة الرئيسية.
+1. اضغط زر **تنزيل آخر إصدار** في الأعلى، ونزّل ملف `OLL-x.xx.pkg` من صفحة الإصدار.
+2. انسخ الملف إلى فلاشة USB، أو إلى المجلد `‎/data/pkg` على الجهاز.
+3. ثبّته من **Debug Settings ← Package Installer** في GoldHEN، أو بأي أداة لتثبيت ملفات PKG.
+4. شغّل **مكتبة أوربس للتعريبات** من الشاشة الرئيسية.
 
 ## التحديث
 
-التطبيق يتحقق بنفسه من الإصدارات الجديدة هنا. عند توفر تحديث، روح إلى
-**الإعدادات > حول التطبيق > تحديث التطبيق**، فينزّل الإصدار الجديد ويتحقق من توقيعه
-ويحفظه في `/data/pkg`، وبعدها ثبّته من Package Installer.
+لا حاجة إلى العودة إلى هذه الصفحة بعد التثبيت الأول. افتح **الإعدادات ← حول التطبيق ← تحديث التطبيق**، فينزّل التطبيق الإصدار الجديد ويتحقق من توقيعه ويحفظه في `‎/data/pkg`، ثم ثبّته من Package Installer.
 
----
+> ملف `update.json` في صفحة كل إصدار هو ملف التحديث الموقّع الذي يقرؤه التطبيق، ولا حاجة إلى تنزيله.
 
-## English
+## تواصل معنا
 
-A PS4 app (GoldHEN) for browsing and installing Arabic game translations.
-This repository only hosts the released app; each version is published under
-[Releases](https://github.com/SajjadRahim/OLL/releases/latest) as a
-ready-to-install `OLL-1.01.pkg`.
+تابع آخر التعريبات والإصدارات، وأبلغ عن أي مشكلة:
 
-**Install:** copy the pkg to a USB drive (or `/data/pkg`) and install it with
-GoldHEN's Debug Settings > Package Installer.
+- **X:** [@OLLPS4](https://x.com/OLLPS4)
+- **تيليجرام:** [t.me/OLLPS4](https://t.me/OLLPS4)
 
-**Update:** the app checks this repository's latest release
-(Settings > About > App update), downloads the new pkg, verifies its signature,
-and saves it to `/data/pkg` so you can install it from the Package Installer.
-`update.json` in each release is that signed update file.
+<br>
+
+<p align="center">من إعداد <b>سجاد رحيم</b></p>
+
+</div>
