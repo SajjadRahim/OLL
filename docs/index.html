@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الأسئلة الشائعة | مكتبة أوربس للتعريبات</title>
+<meta name="description" content="حلول المشكلات الشائعة في تطبيق مكتبة أوربس للتعريبات لأجهزة PS4 المعدلة.">
+<meta name="theme-color" content="#141a33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141a33;
+  --glow1:rgba(98,64,170,.55);--glow2:rgba(16,120,140,.45);--glow3:rgba(30,60,140,.5);
+  --panel:rgba(255,255,255,.045);--panel-b:rgba(255,255,255,.09);
+  --row:rgba(255,255,255,.035);--row-h:rgba(255,255,255,.07);
+  --text:#eef0f7;--muted:#a6adc2;--line:rgba(255,255,255,.09);
+  --accent:#1a7ff0;--accent-2:#0b62d0;--accent-glow:rgba(40,140,255,.45);
+  --green:#3fd07a;--blue-dot:#2f8cff;--tile:rgba(255,255,255,.07);--tile-i:#7fb3ff;
+  --code:rgba(255,255,255,.08);--bar:rgba(20,26,50,.72);
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  --bg:#c9d6f2;
+  --glow1:rgba(196,160,240,.75);--glow2:rgba(120,210,235,.75);--glow3:rgba(230,190,240,.6);
+  --panel:rgba(255,255,255,.55);--panel-b:rgba(255,255,255,.8);
+  --row:rgba(255,255,255,.5);--row-h:rgba(255,255,255,.85);
+  --text:#14182b;--muted:#4f5770;--line:rgba(20,30,70,.1);
+  --accent:#1a8ae6;--accent-2:#0f6fd0;--accent-glow:rgba(30,150,255,.35);
+  --green:#1fae5a;--blue-dot:#0aa6d8;--tile:rgba(20,40,90,.07);--tile-i:#1a6fd8;
+  --code:rgba(20,30,70,.08);--bar:rgba(255,255,255,.7);
+}}
+:root[data-theme="light"]{
+  --bg:#c9d6f2;
+  --glow1:rgba(196,160,240,.75);--glow2:rgba(120,210,235,.75);--glow3:rgba(230,190,240,.6);
+  --panel:rgba(255,255,255,.55);--panel-b:rgba(255,255,255,.8);
+  --row:rgba(255,255,255,.5);--row-h:rgba(255,255,255,.85);
+  --text:#14182b;--muted:#4f5770;--line:rgba(20,30,70,.1);
+  --accent:#1a8ae6;--accent-2:#0f6fd0;--accent-glow:rgba(30,150,255,.35);
+  --green:#1fae5a;--blue-dot:#0aa6d8;--tile:rgba(20,40,90,.07);--tile-i:#1a6fd8;
+  --code:rgba(20,30,70,.08);--bar:rgba(255,255,255,.7);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;min-height:100vh;color:var(--text);font-family:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;font-size:17px;line-height:1.85;
+  background:
+   radial-gradient(60vw 45vh at 55% -5%,var(--glow1),transparent 70%),
+   radial-gradient(55vw 60vh at -5% 105%,var(--glow2),transparent 70%),
+   radial-gradient(50vw 50vh at 105% 60%,var(--glow3),transparent 70%),
+   var(--bg);background-attachment:fixed}
+.wrap{max-width:980px;margin:0 auto;padding:28px 16px 120px}
+/* top bar like the app */
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.brand h1{margin:0;font-size:1.9rem;font-weight:700;line-height:1.3}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--panel-b);font-size:.9rem;white-space:nowrap;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.chip i.b{background:var(--blue-dot);box-shadow:0 0 8px var(--blue-dot)}
+button.chip{font:inherit;color:inherit;cursor:pointer}
+button.chip:hover{border-color:var(--accent)}
+/* panels */
+.panel{background:var(--panel);border:1px solid var(--panel-b);border-radius:22px;padding:20px 22px 14px;margin:18px 0;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.panel h2{display:flex;align-items:center;gap:14px;font-size:1.35rem;margin:0 0 12px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.tile{flex:none;width:44px;height:44px;border-radius:12px;background:var(--tile);display:grid;place-items:center;color:var(--tile-i)}
+.tile svg{width:24px;height:24px}
+.check{margin-top:22px}
+.check p:first-child{margin:0 0 6px;font-weight:600}
+.check ol{margin:0;padding-inline-start:24px}
+.check li::marker{color:var(--accent);font-weight:700}
+/* search + segmented nav */
+.sticky{position:sticky;top:0;z-index:5;padding:12px 0 6px;margin:0 -16px;padding-inline:16px;background:var(--bar);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.searchbox{position:relative}
+.searchbox svg{position:absolute;inset-inline-start:16px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--muted)}
+#q{width:100%;padding:13px 48px 13px 16px;border-radius:16px;border:1px solid var(--panel-b);background:var(--panel);color:var(--text);font:inherit;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#q::placeholder{color:var(--muted)}
+#q:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+.seg{display:flex;gap:4px;margin-top:10px;padding:4px;border-radius:999px;background:var(--panel);border:1px solid var(--panel-b);overflow-x:auto;scrollbar-width:none;width:max-content;max-width:100%}
+.seg::-webkit-scrollbar{display:none}
+.seg a{flex:none;display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:.9rem;white-space:nowrap}
+.seg a b{font-weight:600;color:var(--text)}
+.seg a:hover,.seg a.on{background:linear-gradient(var(--accent),var(--accent-2));color:#fff}
+.seg a:hover b,.seg a.on b{color:#fff}
+/* question rows like settings rows */
+.q{background:var(--row);border:1px solid transparent;border-radius:14px;margin:8px 0;transition:background .15s,border-color .15s,box-shadow .15s}
+.q:hover{background:var(--row-h)}
+.q[open]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 22px var(--accent-glow);background:var(--row-h)}
+.q summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;font-weight:600}
+.q summary::-webkit-details-marker{display:none}
+.q summary:focus-visible{outline:2px solid var(--accent);border-radius:14px}
+.chev{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--muted);position:relative;opacity:.8}
+.chev::before,.chev::after{content:"";position:absolute;top:50%;left:50%;width:12px;height:1.6px;background:var(--text);transform:translate(-50%,-50%) rotate(45deg)}
+.chev::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.q:not([open]) .chev::before,.q:not([open]) .chev::after{width:10px}
+.q:not([open]) .chev::before{transform:translate(-50%,-50%) rotate(0)}
+.q:not([open]) .chev::after{transform:translate(-50%,-50%) rotate(90deg)}
+.q[open] .chev{background:var(--accent);border-color:var(--accent);opacity:1}
+.q[open] .chev::before,.q[open] .chev::after{background:#fff}
+.a{padding:0 18px 10px;color:var(--text)}
+.a p{margin:.4em 0}
+.a ol,.a ul{padding-inline-start:22px;margin:.4em 0}
+.a strong,.check strong{color:var(--tile-i)}
+a{color:var(--tile-i);overflow-wrap:anywhere}
+code{background:var(--code);padding:1px 7px;border-radius:7px;font-size:.88em;font-family:ui-monospace,Consolas,monospace}
+pre{direction:ltr;text-align:left;background:var(--code);border:1px solid var(--line);border-radius:12px;padding:12px 14px;white-space:pre-wrap;overflow-wrap:anywhere;margin:.6em 0;font-size:.85rem;line-height:1.6}
+pre code{background:none;padding:0;font-size:inherit}
+.a p strong{color:var(--text)}
+#none{display:none;color:var(--muted);text-align:center;margin:40px 0}
+.hide{display:none!important}
+/* bottom hint bar like the app */
+.bar{position:fixed;inset-inline:16px;bottom:14px;max-width:948px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 22px;padding:10px 18px;border-radius:20px;background:var(--bar);border:1px solid var(--panel-b);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:6}
+.bar a{display:inline-flex;align-items:center;gap:8px;color:var(--text);text-decoration:none;font-size:.95rem}
+.bar a:hover span{color:var(--tile-i)}
+.k{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 8px;border-radius:999px;background:#0d0f16;color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.02em}
+.k.c{width:28px;padding:0;border:2px solid #ff5a3c;background:#0d0f16;color:#ff5a3c}
+.k.x{width:28px;padding:0;border:2px solid #b8c0d8;color:#b8c0d8}
+.k.t{width:28px;padding:0;border:2px solid #2bd4a4;color:#2bd4a4}
+@media (max-width:640px){
+  .bar a.top-l{display:none}.bar{inset-inline:10px;bottom:10px}
+  body{font-size:16px}.brand h1{font-size:1.5rem}
+  .panel{padding:16px 14px 10px;border-radius:18px}.panel h2{font-size:1.15rem}
+  .tile{width:38px;height:38px}.a{padding:0 14px 8px}
+  .sticky{padding-top:8px;padding-bottom:8px}#q{padding-top:10px;padding-bottom:10px}.seg{margin-top:8px}.seg a{padding:4px 12px;font-size:.85rem}
+  .bar{gap:6px 14px;padding:8px 12px}.bar a{font-size:.85rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">
+    <h1>مكتبة أوربس للتعريبات</h1>
+    <p>الأسئلة الشائعة وحل المشكلات · لأجهزة PS4 المعدلة</p>
+  </div>
+  <div class="chips">
+    <span class="chip"><i></i>25 سؤالًا</span>
+    <span class="chip"><i class="b"></i>الأقسام: 5</span>
+    <button class="chip" id="theme" type="button" aria-label="تبديل الوضع الداكن والفاتح"><i class="b"></i><span id="tl">الثيم</span></button>
+  </div>
+</header>
+
+<section class="panel check">
+  <h2><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8z"/></svg></span>تحقق من هذه النقاط أولًا</h2>
+  <p>قبل أن تسأل في المجموعة، تحقق من هذه النقاط الخمس، فهي تحل أغلب المشكلات:</p>
+<ol>
+<li>ثبت أحدث إصدار من التطبيق من صفحة GitHub الرسمية فقط: <a href="https://github.com/SajjadRahim/OLL/releases/latest" dir="ltr">https://github.com/SajjadRahim/OLL/releases/latest</a></li>
+<li>تأكد أن الجهاز متصل بالإنترنت، وأنك لم تضبط أي DNS مخصص في إعدادات الشبكة.</li>
+<li>فعل خيار <strong>Enable Plugin Loader</strong> من إعدادات GoldHEN، ثم أعد تشغيل الجهاز.</li>
+<li>تأكد أن تحديث لعبتك يطابق التحديث المكتوب في وصف التعريب، وأن رقم النسخة (Title ID) من النسخ المدعومة.</li>
+<li>استخدم لعبة نظيفة لا تحتوي ملفات تعريب سابقة.</li>
+</ol>
+</section>
+
+<div class="sticky">
+  <div class="searchbox">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="ابحث عن مشكلتك: DNS، كراش، VCFG" aria-label="بحث">
+  </div>
+  <nav class="seg" aria-label="الأقسام"><a href="#s0">تنزيل التطبيق وتثبيته<b>5</b></a><a href="#s1">لا تظهر التعريبات أو «الكتالوج غير متصل»<b>4</b></a><a href="#s2">التعريب لا يظهر داخل اللعبة<b>4</b></a><a href="#s3">اللعبة تتوقف أو لا تفتح بعد التعريب<b>5</b></a><a href="#s4">أسئلة عامة<b>7</b></a></nav>
+</div>
+
+<main id="list">
+<section id="s0" class="panel"><h2><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>تنزيل التطبيق وتثبيته</h2>
+<details class="q"><summary><span class="qt">أي ملف أنزل من صفحة الإصدارات؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>نزل ملف <strong>pkg</strong> فقط، وهو أول ملف في القائمة (مثل <code dir="ltr">OLL-1.03.pkg</code>). لا تنزل ملف <code dir="ltr">update.json</code>، فهو ملف خاص بالتحديث التلقائي وليس التطبيق، ولذلك يظهر وكأنه ملف تالف.</p></div></details>
+<details class="q"><summary><span class="qt">لماذا لا يثبت التطبيق عندما أرسله من الهاتف؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>الإرسال من الهاتف لا يعمل مع هذا الملف. ثبته بإحدى طريقتين:</p>
+<ul>
+<li>انسخ الملف إلى فلاش USB وثبته من الجهاز.</li>
+<li>أو انقله عبر FTP إلى المسار <code dir="ltr">/data/pkg</code> ثم ثبته من GoldHEN.</li>
+</ul>
+<p>إن لم تكن تعرف الطريقة، فالشروحات متوفرة بكثرة على الإنترنت.</p></div></details>
+<details class="q"><summary><span class="qt">لا يثبت الإصدار الجديد فوق القديم، ما الحل؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>احذف النسخة القديمة من التطبيق أولًا، ثم ثبت النسخة الجديدة عبر GoldHEN.</p></div></details>
+<details class="q"><summary><span class="qt">كيف أحدث التطبيق؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>من <strong>الإعدادات &gt; حول</strong> داخل التطبيق. أما من يستخدم الإصدار 1.00 أو 1.01 فعليه تثبيت أحدث إصدار يدويًا مرة واحدة، لأن التحديث من داخل التطبيق لم يكن يعمل في تلك الإصدارات، وبعدها تصل التحديثات من داخل التطبيق.</p></div></details>
+<details class="q"><summary><span class="qt">هل أنزل التطبيق من القنوات أو المقاطع التي أعادت رفعه؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>لا. كثير من النسخ المعاد رفعها قديمة. نزل التطبيق دائمًا من رابط GitHub الرسمي أعلاه لتحصل على آخر الإصلاحات.</p></div></details>
+</section>
+<section id="s1" class="panel"><h2><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5 12.9a10 10 0 0 1 14 0"/><path d="M8.5 16.4a5 5 0 0 1 7 0"/><path d="M12 20h.01"/></svg></span>لا تظهر التعريبات أو «الكتالوج غير متصل»</h2>
+<details class="q"><summary><span class="qt">يظهر «الكتالوج غير متصل» أو «لا توجد تعريبات»</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><ul>
+<li>التطبيق يحتاج إلى اتصال حقيقي بالإنترنت لعرض التعريبات وتنزيلها.</li>
+<li>ألغ أي DNS مخصص في إعدادات الشبكة على الجهاز، فهو السبب الأكثر شيوعًا.</li>
+<li>تأكد أنك تستخدم أحدث إصدار من التطبيق.</li>
+<li>إن بقيت المشكلة، فغالبًا الإنترنت لديك ضعيف أو أن مزود الخدمة يحجب الخوادم. التطبيق يعمل عند آلاف المستخدمين، فالمشكلة في هذه الحالة من جهة الاتصال لا من التطبيق.</li>
+</ul></div></details>
+<details class="q"><summary><span class="qt">تظهر رسالة «لا توجد ملفات تعريب على USB»</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>مصدر التعريبات مضبوط على USB. اضغط زر <strong>OPTIONS</strong> (أو افتح الإعدادات) وغير مصدر التعريبات من USB إلى <strong>الإنترنت</strong>.</p></div></details>
+<details class="q"><summary><span class="qt">بقي التطبيق طويلًا على «جارٍ الفحص»</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>عند أول تشغيل ينزل التطبيق أغلفة التعريبات وصورها، وقد يستغرق ذلك وقتًا مع الإنترنت البطيء. انتظر حتى يكتمل التنزيل. منذ الإصدار 1.02 تظهر شاشة توضح العدد والحجم والوقت المتبقي، مع خيار لتخطي الانتظار وإكمال تنزيل الصور في الخلفية. حدث التطبيق إن كنت على إصدار أقدم.</p></div></details>
+<details class="q"><summary><span class="qt">ثبت التطبيق ولا توجد ألعاب فيه</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>التطبيق يوفر <strong>التعريبات فقط</strong> لا الألعاب. يجب أن تكون اللعبة مثبتة على جهازك مسبقًا، ثم تنزل تعريبها من التطبيق.</p></div></details>
+</section>
+<section id="s2" class="panel"><h2><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>التعريب لا يظهر داخل اللعبة</h2>
+<details class="q"><summary><span class="qt">ثبت التعريب لكن اللعبة ما زالت بالإنجليزية</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><ol>
+<li>فعل <strong>Enable Plugin Loader</strong> من إعدادات GoldHEN.</li>
+<li>أعد تشغيل الجهاز بعد التفعيل، ثم جرب مجددًا.</li>
+<li>تأكد أن تحديث لعبتك يطابق التحديث المطلوب في وصف التعريب.</li>
+<li>بعض الألعاب لها أكثر من نسخة تعريب حسب التحديث، مثل Call of Duty Black Ops (نسخة لتحديث 1.08 وأخرى لـ1.09). اختر النسخة التي تطابق تحديثك.</li>
+</ol></div></details>
+<details class="q"><summary><span class="qt">هل يحتاج كل تعريب جديد إلى تحديث التطبيق؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>ليس دائمًا، لكن إبقاء التطبيق محدثًا يضمن أن تعمل أغلب التعريبات بسلاسة. بعض التعريبات تتطلب إصدارًا معينًا من التطبيق، ويذكر ذلك في وصفها (مثل Yakuza 0 الذي يتطلب الإصدار 1.03 أو أحدث).</p></div></details>
+<details class="q"><summary><span class="qt">لعبتي على تحديث مختلف عن المطلوب، هل أستطيع تثبيت التعريب؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>يعتمد ذلك على اللعبة. يمكنك التجربة، فإن لم يعمل أو سبب مشكلة فاحذف التعريب وستعود اللعبة كما كانت. لكن انتبه إلى أن اختلاف التحديث هو أكثر أسباب توقف الألعاب، والتطبيق ينبهك عند وجود هذا الاختلاف.</p></div></details>
+<details class="q"><summary><span class="qt">لعبتي معربة سابقًا بتعريب آخر، هل أثبت تعريب المكتبة فوقها؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>يفضل استخدام نسخة نظيفة متوافقة مع التحديث المكتوب في الوصف، ومن دون أي ملفات تعريب سابقة.</p></div></details>
+</section>
+<section id="s3" class="panel"><h2><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.7 16-8-14a2 2 0 0 0-3.4 0l-8 14A2 2 0 0 0 4 19h16a2 2 0 0 0 1.7-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>اللعبة تتوقف أو لا تفتح بعد التعريب</h2>
+<details class="q"><summary><span class="qt">تتوقف اللعبة عند التشغيل (كراش) بعد تثبيت التعريب</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><ul>
+<li><strong>السبب الأشيع:</strong> تحديث اللعبة لا يطابق التحديث الذي أعد له التعريب. لا تتجاهل تنبيهات التطبيق بشأن تعارض النسخة. مثال: تعريب Sekiro يدعم تحديث 1.06 فقط، وعلى 1.05 أو أقدم تتوقف اللعبة.</li>
+<li><strong>إضافات أخرى في GoldHEN:</strong> قد تتعارض إضافة أخرى مثل VCFG مع إضافة التعريب <code dir="ltr">ot.prx</code>. انظر السؤالين التاليين لتعطيلها للعبة واحدة.</li>
+<li><strong>التوقف المفاجئ أثناء اللعب أو رمز الخطأ CE-34878-0:</strong> أصلح في الإصدار 1.03، فحدث التطبيق ثم أعد تثبيت التعريب.</li>
+</ul></div></details>
+<details class="q"><summary><span class="qt">اللعبة تتوقف مع إضافة VCFG (توليد الإطارات)، كيف أعطلها لهذه اللعبة فقط؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>إضافة VCFG تعمل داخل اللعبة مثل إضافة التعريب <code dir="ltr">ot.prx</code>، وقد تتعارض الإضافتان في بعض الألعاب فتتوقف اللعبة. والتطبيق ينبهك في صفحة التعريب إذا وجد إضافة أخرى مفعلة للعبة نفسها. طريقة التعطيل تختلف حسب نوع اللعبة في تطبيق VCFG:</p>
+<p><strong>إذا كانت اللعبة تظهر في VCFG بعلامة EXPERIMENTAL:</strong></p>
+<ol>
+<li>افتح تطبيق VCFG من الشاشة الرئيسية.</li>
+<li>اختر اللعبة واضغط <strong>✕</strong> لإيقاف توليد الإطارات (FG) لها.</li>
+<li>سيحذف VCFG اللعبة من ملف <code dir="ltr">plugins.ini</code> تلقائيًا. أغلق اللعبة تمامًا ثم شغلها من جديد.</li>
+</ol>
+<p><strong>إذا كانت اللعبة من الألعاب المدعومة رسميًا في VCFG</strong> (مثل Sekiro وRed Dead Redemption 2):</p>
+<p>VCFG يضيف نفسه لهذه الألعاب دائمًا، حتى لو أوقفت توليد الإطارات لها، ويعيد إضافتها في كل مرة تفتح فيها تطبيقه. لذلك لديك خياران:</p>
+<ul>
+<li><strong>إيقاف VCFG بالكامل:</strong> افتح تطبيق VCFG، واذهب إلى تبويب <strong>04 PLUGIN</strong>، واضغط <strong>□ (TURN OFF)</strong>. يحذف هذا ملفات VCFG وأسطره من <code dir="ltr">plugins.ini</code> ويبقي إضافاتك الأخرى، ويبقى معطلًا حتى تضغط <strong>✕ (INSTALL)</strong> في التبويب نفسه.</li>
+<li><strong>تعطيله يدويًا لهذه اللعبة:</strong> احذف سطر VCFG من قسم اللعبة في <code dir="ltr">plugins.ini</code> كما في الشرح التالي، ولا تفتح تطبيق VCFG بعدها، لأنه سيعيد السطر عند تشغيله.</li>
+</ul></div></details>
+<details class="q"><summary><span class="qt">كيف أعطل أي إضافة لعبة معينة يدويًا؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>تقرأ GoldHEN الإضافات من الملف <code dir="ltr">/data/GoldHEN/plugins.ini</code>. الإضافات تحت قسم <code dir="ltr">[default]</code> تعمل في كل الألعاب، والإضافات تحت قسم برقم اللعبة، مثل <code dir="ltr">[CUSA13801]</code>، تعمل في تلك اللعبة فقط. وتحمل اللعبة الإضافات من القسمين معًا.</p>
+<ol>
+<li>اتصل بالجهاز عبر FTP (مثلًا من GoldHEN بتفعيل FTP Server، أو بأي تطبيق FTP على الجهاز).</li>
+<li>انسخ الملف <code dir="ltr">/data/GoldHEN/plugins.ini</code> إلى حاسوبك، واحتفظ بنسخة احتياطية منه.</li>
+<li>افتحه بأي محرر نصوص، وابحث عن قسم رقم لعبتك.</li>
+<li>ضع فاصلة منقوطة <code dir="ltr">;</code> في بداية سطر الإضافة التي تريد تعطيلها، أو احذف السطر. لا تلمس سطر <code dir="ltr">ot.prx</code> لأنه إضافة التعريب.</li>
+<li>أعد الملف إلى مكانه نفسه، ثم أغلق اللعبة تمامًا وشغلها من جديد.</li>
+</ol>
+<p>مثال لتعطيل VCFG في Sekiro مع إبقاء التعريب:</p>
+<pre dir="ltr"><code>[CUSA13801]
+/data/GoldHEN/plugins/ot.prx
+;/data/GoldHEN/plugins/vcfg_classic51.prx</code></pre>
+<p>إذا كانت الإضافة تحت قسم <code dir="ltr">[default]</code>، فهي تعمل في كل الألعاب، وتعطيلها هناك يعطلها للجميع. ولإعادة تفعيل الإضافة احذف الفاصلة المنقوطة من بداية السطر.</p></div></details>
+<details class="q"><summary><span class="qt">كيف أحذف التعريب؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>افتح التطبيق، واختر اللعبة، ثم اضغط <strong>إزالة</strong>. يحذف التعريب وتعود اللعبة كما كانت قبل تثبيته.</p></div></details>
+<details class="q"><summary><span class="qt">في التعريب أخطاء أو حروف تظهر مربعات أو اللعبة تتوقف في مهمة معينة</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><ul>
+<li>تحقق أولًا من توافق تحديث لعبتك مع التعريب.</li>
+<li>المكتبة تجمع تعريبات فرق التعريب ولا تترجم الألعاب. إن كانت المشكلة في التعريب نفسه، فتواصل مع الفريق صاحب التعريب المذكور في صفحته.</li>
+<li>إن كان التعريب من نقل المكتبة (مثل Black Ops وYakuza 0)، فأبلغنا بمكان المشكلة بالضبط، ويستحسن أن ترسل ملف حفظ اللعبة عند تلك النقطة.</li>
+</ul></div></details>
+</section>
+<section id="s4" class="panel"><h2><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>أسئلة عامة</h2>
+<details class="q"><summary><span class="qt">هل يحتاج التطبيق إلى الإنترنت؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>نعم، لتنزيل التعريبات. ويمكنك من صفحة التعريب نسخه إلى فلاش USB لتثبيته لاحقًا أو على جهاز آخر.</p></div></details>
+<details class="q"><summary><span class="qt">هل يدعم التطبيق PS5؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>حاليًا يعمل على PS4 المعدل فقط. نسخة PS5 ضمن الخطط، ولا يوجد موعد محدد لها.</p></div></details>
+<details class="q"><summary><span class="qt">هل التعريبات دبلجة صوتية؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>أغلب التعريبات المتوفرة، إن لم يكن جميعها، ترجمة نصية لا دبلجة.</p></div></details>
+<details class="q"><summary><span class="qt">هل تترجمون الألعاب؟ هل لديكم تعريبات حصرية؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>لا نترجم الألعاب، والتعريبات من أعمال فرق التعريب العربية. فكرة التطبيق تسهيل الوصول إليها. وقد ننقل في المستقبل تعريبات من نسخ PC إلى PS4 إن لم تكن متوفرة.</p></div></details>
+<details class="q"><summary><span class="qt">هل توفرون روابط للألعاب أو تحديثاتها؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>لا. لا نوفر روابط ألعاب، ولا ندعم القرصنة بأي شكل.</p></div></details>
+<details class="q"><summary><span class="qt">أريد تعريبًا للعبة غير موجودة</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>اطلبه في المجموعة، ونضيف تعريبات جديدة بشكل دوري متى وجد فريق ترجم اللعبة. أما الألعاب المعربة رسميًا من الشركة فلا تضاف إلى المكتبة.</p></div></details>
+<details class="q"><summary><span class="qt">كيف أبلغ عن مشكلة؟</span><span class="chev" aria-hidden="true"></span></summary><div class="a"><p>من خيار <strong>الإبلاغ عن مشكلة</strong> في قائمة الخيارات داخل التطبيق، أو في مجموعة تيليجرام: <a href="https://t.me/OLLPS4" dir="ltr">https://t.me/OLLPS4</a></p>
+<p>وعند الإبلاغ اذكر: إصدار التطبيق، واسم اللعبة ورقمها (Title ID)، وتحديث اللعبة، وإصدار الجهاز وإصدار GoldHEN، مع صورة لرسالة الخطأ إن وجدت.</p></div></details>
+</section>
+
+</main>
+<p id="none">لم نجد سؤالًا يطابق بحثك. اسألنا في مجموعة تيليجرام: <a href="https://t.me/OLLPS4" dir="ltr">t.me/OLLPS4</a></p>
+</div>
+
+<nav class="bar" aria-label="روابط">
+  <a href="https://github.com/SajjadRahim/OLL/releases/latest"><span class="k x">✕</span><span>تنزيل التطبيق</span></a>
+  <a href="https://t.me/OLLPS4"><span class="k t">△</span><span>تيليجرام</span></a>
+  <a href="https://x.com/OLLPS4"><span class="k c">○</span><span>X</span></a>
+  <a class="top-l" href="#top" onclick="scrollTo({top:0});return false"><span class="k">OPTIONS</span><span>إلى الأعلى</span></a>
+</nav>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme'),tl=document.getElementById('tl');
+  function cur(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');}
+  function label(){tl.textContent=cur()==='dark'?'الثيم: داكن':'الثيم: فاتح';}
+  try{var t=localStorage.getItem('oll-theme');if(t)root.setAttribute('data-theme',t);}catch(e){}
+  label();
+  btn.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('oll-theme',n);}catch(e){}label();});
+  function norm(s){return s.toLowerCase().replace(/[-ـ]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي');}
+  var items=[].slice.call(document.querySelectorAll('.q')),secs=[].slice.call(document.querySelectorAll('#list section'));
+  var idx=items.map(function(d){return norm(d.textContent);});
+  document.getElementById('q').addEventListener('input',function(){
+    var v=norm(this.value.trim()),any=false;
+    items.forEach(function(d,i){var hit=!v||idx[i].indexOf(v)>-1;d.classList.toggle('hide',!hit);d.open=!!v&&hit;if(hit)any=true;});
+    secs.forEach(function(s){s.classList.toggle('hide',!s.querySelector('.q:not(.hide)'));});
+    document.getElementById('none').style.display=any?'none':'block';
+  });
+  var links=[].slice.call(document.querySelectorAll('.seg a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){var on=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('on',on);if(on){var n=a.parentNode;n.scrollLeft=a.offsetLeft-(n.clientWidth-a.offsetWidth)/2;}});}});},{rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
